@@ -1,0 +1,25 @@
+NewBundle\Entity\Usuarios:
+    type: entity
+    table: usuarios
+    repositoryClass: NewBundle\Repository\UsuariosRepository
+    id:
+        id:
+            id: true
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            length: '30'
+        apePaterno:
+            type: string
+            length: '30'
+            column: ape_paterno
+        apeMaterno:
+            type: string
+            length: '30'
+            column: ape_materno
+        edad:
+            type: integer
+    lifecycleCallbacks: {  }

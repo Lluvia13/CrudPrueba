@@ -1,0 +1,23 @@
+NewBundle\Entity\Direccion:
+    type: entity
+    table: direccion
+    repositoryClass: NewBundle\Repository\DireccionRepository
+    id:
+        id:
+            id: true
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        calle:
+            type: string
+            length: '30'
+        colonia:
+            type: string
+            length: '30'
+        delegacion:
+            type: string
+            length: '30'
+        numero:
+            type: integer
+    lifecycleCallbacks: {  }

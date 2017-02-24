@@ -1,0 +1,11 @@
+<?php
+
+namespace NewBundle\Entity;
+
+/**
+ * Direccion
+ */
+class Direccion
+{
+ 
+}

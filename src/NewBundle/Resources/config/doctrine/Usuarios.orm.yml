@@ -1,0 +1,34 @@
+NewBundle\Entity\Usuarios:
+    type: entity
+    table: usuarios
+    repositoryClass: NewBundle\Repository\UsuariosRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        nombre:
+            type: string
+            length: '30'
+        apePaterno:
+            type: string
+            length: '30'
+            column: ape_paterno
+        apeMaterno:
+            type: string
+            length: '30'
+            column: ape_materno
+        edad:
+            type: integer
+    manyToOne:
+        direccion:
+            targetEntity: NewBundle\Entity\Direccion
+            joinColumn:
+                name: direccion
+                referenceColumnName: id
+
+
+    lifecycleCallbacks: {  }
+
